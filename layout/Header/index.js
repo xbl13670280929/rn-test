@@ -8,8 +8,8 @@ export default function Header() {
                 <Text>1</Text>
             </View>
             <View style={styles.boxC}>
-                <ImageBackground source={image} resizeMode="cover" style={styles.logoImg}>
-                </ImageBackground>
+                {/* <ImageBackground source={image} resizeMode="cover" style={styles.logoImg}>
+                </ImageBackground> */}
             </View>
             <View style={styles.boxR}>
                 <Text>2</Text>
