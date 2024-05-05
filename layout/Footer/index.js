@@ -2,16 +2,18 @@ import { useEffect, useState } from "react";
 import { TouchableWithoutFeedback, StyleSheet, Text, View } from "react-native";
 
 export default function Footer() {
-    const [list, setList] = useState([{
-        title: '11',
-    }, {
-        title: '22',
-    }, {
-        title: '33',
-    }]);
+    const [list, setList] = useState([]);
     const [activeIndex, setActiveIndex] = useState(null);
     useEffect(() => {
-        console.log(112233);
+        const fn1 = async () => {
+            const res = await fetch('http://api.aiwoman1.com/website/nav-footer/tree');
+            const data = await res.json();
+            
+            if(data.code === '0') {
+                setList(data.data || []);
+            }
+        }
+        fn1();
     }, [])
     return (
         <View style={styles.container}>
