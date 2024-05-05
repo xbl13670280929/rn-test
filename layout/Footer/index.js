@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TouchableWithoutFeedback, StyleSheet, Text, View } from "react-native";
 
 export default function Footer() {
@@ -10,6 +10,9 @@ export default function Footer() {
         title: '33',
     }]);
     const [activeIndex, setActiveIndex] = useState(null);
+    useEffect(() => {
+        console.log(112233);
+    }, [])
     return (
         <View style={styles.container}>
             {list.map((item, index) => {
