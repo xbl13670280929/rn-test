@@ -8,18 +8,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Textcss />
-      <Index />
-      <My />
-      <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
   },
 });
